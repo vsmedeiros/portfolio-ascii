@@ -1,3 +1,4 @@
+// Código para trocar entre cores do dark modes
 function toggleDarkMode() {
   document.documentElement.classList.toggle("light-mode");
   const icon = document.querySelector(".dark-mode-toggle i");

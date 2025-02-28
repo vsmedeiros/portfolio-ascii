@@ -112,29 +112,32 @@ main section h2 i {
     color: var(--color-detail);
 }
 
-.main-footer {
+footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: .5rem 1rem;
     width: 100%;
     gap: .5rem;
+    @media (max-width: 500px) {
+        margin-bottom: 4rem;
+    }
 }
 
-.main-footer div {
+footer div {
     height: 2rem;
     display: flex;
     align-items: center;
     gap: .5rem;
 }
 
-.main-footer nav a {
+footer nav a {
     color: var(--color-text);
     text-decoration: none;
     transition: color .3s ease;
 }
 
-.main-footer nav {
+footer nav {
     display: flex;
     gap: .5rem;
 
@@ -143,7 +146,7 @@ main section h2 i {
     }
 }
 
-.main-footer nav a:hover {
+footer nav a:hover {
     color: var(--color-detail);
 }
 
@@ -308,7 +311,7 @@ section:last-child {
 
 .carousel-item a,
 #contact a,
-.main-footer div a {
+footer div a {
     background-color: var(--color-button-primary);
     color: var(--color-button-text);
     padding: .5rem;
@@ -319,7 +322,7 @@ section:last-child {
 
 .carousel-item a:hover,
 #contact a:hover,
-.main-footer div a:hover {
+footer div a:hover {
     background-color: var(--color-button-primary-hover);
 }
 
