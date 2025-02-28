@@ -5,9 +5,14 @@ const dropdownMenu = document.getElementById("dropdownMenu");
 dropdownButton.addEventListener("click", () =>
   dropdownMenu.classList.toggle("show")
 );
-dropdownButton.addEventListener("mouseover", () =>
-  dropdownMenu.classList.add("show")
-);
+
+function updateHoverEvent() {
+  if (isDesktop()) {
+    dropdownButton.addEventListener("mouseover", showMenu);
+  } else {
+    dropdownButton.removeEventListener("mouseover", showMenu);
+  }
+}
 
 window.addEventListener("click", function (event) {
   if (!event.target.matches("#dropdownButton")) {
@@ -26,3 +31,14 @@ document.addEventListener("keydown", function (event) {
     dropdownMenu.classList.remove("show");
   }
 });
+
+function isDesktop() {
+  return window.innerWidth > 768 && !("ontouchstart" in window);
+}
+
+function showMenu() {
+  dropdownMenu.classList.add("show");
+}
+
+updateHoverEvent();
+window.addEventListener("resize", updateHoverEvent);
