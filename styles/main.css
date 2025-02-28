@@ -5,11 +5,14 @@ html {
 }
 
 :root {
-    --color-primary: #2f4550;
-    --color-secondary: #586f7c;
-    --color-detail: #b8dbd9;
+    --color-button-primary: #8234E9;
+    --color-button-primary-hover: #9956F6;
+    --color-button-secondary: #29292E;
+    --color-button-secondary-hover: #323238;
+    --color-border: #333333;
     --color-text: #ffffff;
-    --color-background: #181A1B;
+    --color-background: #121214;
+    --color-surface: #1A1A1E;
 }
 
 
@@ -25,13 +28,14 @@ body {
 }
 
 header {
-    background-color: var(--color-primary);
+    background-color: var(--color-surface);
     margin: 0;
     position: sticky;
     top: 0;
     display: flex;
     justify-content: flex-end;
     padding: .5rem 1rem;
+    border-bottom: 1px solid var(--color-border);
 }
 
 main {
@@ -40,11 +44,11 @@ main {
 }
 
 footer {
-    background-color: var(--color-primary);
+    background-color: var(--color-surface);
     display: flex;
     justify-content: center;
     padding: .5rem 1rem;
-    border-radius: 15px 15px 0 0;
+    border-top: 1px solid var(--color-border);
 }
 
 .dropdown {
@@ -54,36 +58,44 @@ footer {
 
 .dropdown-button {
     padding: .5rem;
-    border: none;
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
     cursor: pointer;
-    background-color: transparent;
+    background-color: var(--color-button-secondary);
     font-size: 1.5rem;
     display: flex;
     color: var(--color-text);
+    transition: all .3s ease-in-out;
+}
+
+.dropdown-button:hover {
+    background-color: var(--color-button-secondary-hover);
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
     right: 0;
-    min-width: 10rem;
-    border-radius: 15px;
+    min-width: 15rem;
+    border-radius: 5px;
+    border: 1px solid var(--color-border);
     overflow: hidden;
     color: var(--color-text);
     transition: all .3s ease-in-out;
 }
 
 .dropdown-content a {
-    background-color: var(--color-primary);
+    background-color: var(--color-button-secondary);
     padding: 1rem;
     text-decoration: none;
-    display: block;
+    display: flex;
     color: white;
     transition: all .3s ease-in-out;
+    gap: .5rem;
 }
 
 .dropdown-content a:hover {
-    background-color: var(--color-secondary);
+    background-color: var(--color-button-secondary-hover);
     color: #F4F4F6;
 }
 
