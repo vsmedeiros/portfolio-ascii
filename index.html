@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/global.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
 </head>
 
 <body>
@@ -19,13 +18,13 @@
                 <i class="fa-solid fa-bars" id="dropdownButton"></i>
             </button>
             <div class="dropdown-content" id="dropdownMenu">
-                <a href="#"><i class="fa-solid fa-user"></i>
+                <a href="#about"><i class="fa-solid fa-user"></i>
                     Sobre mim</a>
-                <a href="#"><i class="fa-solid fa-laptop-code"></i>
+                <a href="#skills"><i class="fa-solid fa-laptop-code"></i>
                     Habilidades</a>
-                <a href="#"><i class="fa-solid fa-briefcase"></i>
+                <a href="#experience"><i class="fa-solid fa-briefcase"></i>
                     Experiência e Projetos</a>
-                <a href="#"><i class="fa-solid fa-envelope"></i>
+                <a href="#contact"><i class="fa-solid fa-envelope"></i>
                     Contato</a>
             </div>
         </div>
@@ -34,11 +33,11 @@
 
     <main>
         <div class="container">
-            <section id="about-me-section">
+            <section id="about">
                 <h2><i class="fa-solid fa-user"></i>Sobre mim</h2>
-                <div class="section-content">
+                <div class="section-content" id="about-me-section">
                     <div>
-                        <p>Olá! Seja bem-vindo ao meu portfólio.</p>
+                        <p>Olá! Seja bem-vindo ao meu portfólio!</p>
                         <p>Sou <b>Vítor Silva Medeiros</b>, tenho 29 anos e estou no 5º período de <b>Sistemas de
                                 Informação</b>.
                         </p>
@@ -57,12 +56,42 @@
                 </div>
 
             </section>
-            <section>
+            <section id="skills">
                 <h2><i class="fa-solid fa-laptop-code"></i>Habilidades</h2>
-                <p>Trabalho em grupo</p>
+                <div class="section-content" id="skills-section">
+                    <div>
+                        <h3>Habilidades técnicas:</h3>
+                        <ul>
+                            <li>Html: Intermediário <span class="rating-high"></span></li>
+                            <li>CSS: Intermediário <span class="rating-high"></span></li>
+                            <li>Javascript: Intermediário <span class="rating-medium"></span></li>
+                            <li>React: Intermediário <span class="rating-medium"></span></li>
+                            <li>Git Github: Intermediário <span class="rating-medium"></span></li>
+                            <li>Node.js: Iniciante <span class="rating-initial"></span></li>
+                            <li>React Native: Iniciante <span class="rating-initial"></span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Habilidades interpessoais</h3>
+                        <ul>
+                            <li>Organização</li>
+                            <li>Trabalho em grupo </li>
+                            <li>Comunicação </li>
+                            <li>Proatividade</li>
+                            <li>Visão sistêmica </li>
+                        </ul>
+
+                        <p>No dia a dia, procuro compartilhar conhecimento e
+                            apoiar o trabalho da equipe, de forma que todos se sintam
+                            à vontade para também me apoiar quando necessário.
+                            Além disso,
+                            estou sempre buscando oportunidades de aprimorar os processos de desenvolvimento,
+                            com o objetivo de entregar resultados de qualidade.
+                        </p>
+                    </div>
             </section>
 
-            <section>
+            <section id="experience">
                 <h2><i class="fa-solid fa-briefcase"></i>Experiência e Projetos</h2>
                 <article>
                     <h3>Front-end</h3>
@@ -71,7 +100,7 @@
 
             </section>
 
-            <section>
+            <section id="contact">
                 <h2><i class="fa-solid fa-envelope"></i>Contato</h2>
                 <article>
                     <h3>Telefone</h3>
@@ -93,5 +122,6 @@
 </body>
 <script src="scripts/main.js"></script>
 <script src="scripts/dropdown.js"></script>
+<script src="scripts/skills.js"></script>
 
 </html>
