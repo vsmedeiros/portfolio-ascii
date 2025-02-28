@@ -203,9 +203,10 @@ footer nav a:hover {
 
 #user-photo {
     border-radius: 100%;
-    width: 8.5rem;
+    width: 8rem;
     height: 8rem;
     border: 5px solid var(--color-detail);
+    object-fit: cover;
 }
 
 .section-content {
