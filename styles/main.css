@@ -1,11 +1,10 @@
-html {
-    margin: 0;
-    padding: 0;
+* {
     box-sizing: border-box;
 }
 
 :root {
     --color-button-primary: #8234E9;
+    --color-detail: #8234E9;
     --color-button-primary-hover: #9956F6;
     --color-button-secondary: #29292E;
     --color-button-secondary-hover: #323238;
@@ -25,6 +24,8 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    align-items: center;
+    overflow-y: hidden;
 }
 
 header {
@@ -36,11 +37,60 @@ header {
     justify-content: flex-end;
     padding: .5rem 1rem;
     border-bottom: 1px solid var(--color-border);
+    width: 100%;
+
+    @media (max-width: 425px) {
+        justify-content: center;
+    }
 }
 
 main {
-    padding: 1rem;
+    width: 100%;
     flex: 1;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+}
+
+main .container {
+    width: 60%;
+    padding-top: 4rem;
+
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-surface);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-button-primary);
+    border-radius: 5px;
+    border: 2px solid var(--color-border);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-button-primary-hover);
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-button-primary) var(--color-surface);
+}
+
+main section h2 {
+    font-size: 2rem;
+    display: flex;
+    gap: .5rem;
+}
+
+main section h2 i {
+    color: var(--color-detail);
 }
 
 footer {
@@ -49,6 +99,7 @@ footer {
     justify-content: center;
     padding: .5rem 1rem;
     border-top: 1px solid var(--color-border);
+    width: 100%;
 }
 
 .dropdown {
@@ -82,6 +133,13 @@ footer {
     overflow: hidden;
     color: var(--color-text);
     transition: all .3s ease-in-out;
+    top: 3.5rem;
+    @media (max-width: 425px) {
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 100vw;
+    }
+
 }
 
 .dropdown-content a {
@@ -92,6 +150,9 @@ footer {
     color: white;
     transition: all .3s ease-in-out;
     gap: .5rem;
+    @media (max-width: 425px) {
+        justify-content: center;
+    }
 }
 
 .dropdown-content a:hover {
@@ -99,7 +160,32 @@ footer {
     color: #F4F4F6;
 }
 
+.dropdown-content a:hover i {
+    color: var(--color-button-primary-hover);
+}
+
 .show {
     display: block;
-    
+
+}
+
+#about-me-section {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+}
+
+#user-photo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#user-photo {
+    border-radius: 100%;
+    width: 8.5rem;
+    height: 8rem;
+    border: 5px solid var(--color-detail);
 }
