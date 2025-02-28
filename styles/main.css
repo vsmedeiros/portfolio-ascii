@@ -64,23 +64,18 @@ main .container {
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--color-surface);
+    background-color: var(--color-surface);
     border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--color-button-primary);
     border-radius: 5px;
     border: 2px solid var(--color-border);
+    background: var(--color-button-primary);
 }
 
 ::-webkit-scrollbar-thumb:hover {
     background: var(--color-button-primary-hover);
-}
-
-* {
-    scrollbar-width: thin;
-    scrollbar-color: var(--color-button-primary) var(--color-surface);
 }
 
 main section h2 {
@@ -134,6 +129,7 @@ footer {
     color: var(--color-text);
     transition: all .3s ease-in-out;
     top: 3.5rem;
+
     @media (max-width: 425px) {
         left: 50%;
         transform: translate(-50%, 0);
@@ -150,6 +146,7 @@ footer {
     color: white;
     transition: all .3s ease-in-out;
     gap: .5rem;
+
     @media (max-width: 425px) {
         justify-content: center;
     }
@@ -172,15 +169,10 @@ footer {
 #about-me-section {
     display: flex;
     gap: 1rem;
-    align-items: center;
-    justify-content: center;
-    height: fit-content;
-}
-
-#user-photo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    ;
 }
 
 #user-photo {
@@ -188,4 +180,15 @@ footer {
     width: 8.5rem;
     height: 8rem;
     border: 5px solid var(--color-detail);
+    
+}
+
+.section-content {
+    display: flex;
+    background-color: var(--color-surface);
+    padding: 2rem;
+    gap: 2rem;
+    border-radius: 5px;
+    border: 1px solid var(--color-border);
+    align-items: center;
 }
