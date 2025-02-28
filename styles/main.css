@@ -200,10 +200,20 @@ footer {
     flex-direction: row;
     gap: 2rem;
     align-items: center;
+
+    @media (max-width: 425px) {
+        flex-direction: column;
+    }
 }
 
-#skills-section {
+#skills-section, #contact-section {
+    gap: 1rem;
     flex-direction: row;
+    text-align: justify;
+
+    @media (max-width: 425px) {
+        flex-direction: column;
+    }
 }
 
 #skills-section div {
@@ -212,4 +222,78 @@ footer {
 
 section:last-child {
     padding-bottom: 4rem;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    padding: 2rem;
+    background-color: var(--color-surface);
+    text-align: center;
+}
+
+.carousel-item img {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 100%;
+    border: 5px solid var(--color-detail);
+    object-fit: cover;
+}
+
+.carousel-item h3 {
+    color: var(--color-detail);
+}
+
+.carousel-item p {
+    color: var(--color-text);
+}
+
+.carousel-item a, #contact a {
+    background-color: var(--color-button-primary);
+    color: var(--color-text);
+    padding: .5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-item a:hover, #contact a:hover {
+    background-color: var(--color-button-primary-hover);
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--color-button-primary);
+    color: var(--color-text);
+    border: none;
+    font-size: 1rem;
+    padding: 1rem;
+    cursor: pointer;
+    z-index: 3;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.carousel-control:hover {
+    background-color: var(--color-button-primary-hover);
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
 }
