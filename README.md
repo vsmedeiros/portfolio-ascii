@@ -1,2 +1,14 @@
-# portfolio-ascii
-Projeto do processo seletivo da Empresa Júnior da computação UFU - ASCII, contendo um portfólio em html, css e javascript
+# Portfólio - Processo Seletivo PS2024.2 ASCII
+
+Este é o projeto do processo seletivo da **Empresa Júnior da Computação UFU - ASCII**.
+
+## 🔥 Funcionalidades
+
+- 🎠 **Carrossel de projetos**  
+- 🌙 **Botão de modo noturno**  
+- 🔗 **Links para seções da página**  
+
+## 📚 Tecnologias e Bibliotecas
+
+- **HTML, CSS e JavaScript**  
+- [Font Awesome](https://fontawesome.com/) (ícones)  
