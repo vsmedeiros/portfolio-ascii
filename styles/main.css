@@ -103,7 +103,7 @@ main section h2 {
 
 main section {
     padding-top: 1rem;
-    margin-bottom: 10rem;
+    margin-bottom: 4rem;
 }
 
 
@@ -120,7 +120,7 @@ footer {
     width: 100%;
     gap: .5rem;
     @media (max-width: 500px) {
-        padding-bottom: 5rem;
+        padding-bottom: 8rem;
     }
 }
 
