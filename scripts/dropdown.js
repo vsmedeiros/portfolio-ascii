@@ -1,3 +1,4 @@
+// Código para dropdown menu do header
 const dropdownButton = document.getElementById("dropdownButton");
 const dropdownMenu = document.getElementById("dropdownMenu");
 

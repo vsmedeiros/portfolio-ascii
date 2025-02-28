@@ -1,3 +1,4 @@
+//Código para inserir estrelas na seção de habilidades
 const mediumRatingElements = document.getElementsByClassName("rating-medium");
 const initialRatingElements = document.getElementsByClassName("rating-initial");
 const highRatingElements = document.getElementsByClassName("rating-high");

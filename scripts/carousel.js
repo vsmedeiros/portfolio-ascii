@@ -1,3 +1,4 @@
+//Código para o carrocel de imagens da seção de experiências
 let currentIndex = 0;
 
 function moveCarousel(step) {
