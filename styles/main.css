@@ -40,6 +40,9 @@ body {
     height: 100vh;
     align-items: center;
     overflow-y: hidden;
+    @media (max-width: 500px) {
+        padding-bottom: 4rem;
+    }
 }
 
 header {
@@ -119,9 +122,6 @@ footer {
     padding: .5rem 1rem;
     width: 100%;
     gap: .5rem;
-    @media (max-width: 500px) {
-        padding-bottom: 12rem;
-    }
 }
 
 footer div {
